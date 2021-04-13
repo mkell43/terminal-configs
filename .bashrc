@@ -28,6 +28,10 @@ esac
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# UTF8 things
+export LC_ALL=en_IN.UTF-8
+export LANG=en_IN.UTF-8
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
