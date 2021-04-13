@@ -1,3 +1,3 @@
-export TMUX_CONFIG_DIR=$DOTFILE_DIR/tmux
+export TMUX_CONFIG_DIR=$DOTFILE_DIR/tmux # We use this in the tmux.conf
 export TMUX_CONFIG=$TMUX_CONFIG_DIR/tmux.conf
 alias tmux="tmux -f $TMUX_CONFIG"
