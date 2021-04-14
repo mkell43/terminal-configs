@@ -5,6 +5,17 @@
 
 ## Install
 
+### From Keybase
+
+```bash
+cd ~/
+git clone keybase://private/mkell43/dotfiles
+mv ~/.bashrc{,.bak} # Backup existing .bashrc
+ln -s ~/dotfiles/.bashrc ~/.bashrc
+```
+
+### From Github
+
 ```bash
 cd ~/
 git clone keybase://private/mkell43/dotfiles
