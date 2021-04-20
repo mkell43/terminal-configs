@@ -1,0 +1,24 @@
+# shellcheck disable=SC2148
+
+export PROJECTS_DIR=$HOME/Projects
+
+# __projects_ls() {
+#     find "$PROJECTS_DIR" -maxdepth 1 -mindepth 1 -type d -exec basename {} \;
+# }
+
+# alias pls='$(__projects_ls)'
+
+# oldIFS=$IFS
+# IFS=$'\n'
+# choices=( $loremipsums )
+# IFS=$oldIFS
+# PS3="Please enter your choice: "
+# select answer in "${choices[@]}"; do
+#   for item in "${choices[@]}"; do
+#     if [[ $item == $answer ]]; then
+#       break 2
+#     fi
+#   done
+# done
+# echo "$answer"
+
