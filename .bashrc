@@ -1,3 +1,4 @@
+# shellcheck disable=SC2148
 #    __  __ _  ________ _      _      ______ _____            
 #   |  \/  | |/ /  ____| |    | |    |  ____|  __ \           
 #   | \  / | ' /| |__  | |    | |    | |__  | |__) |          
@@ -49,3 +50,9 @@ fi;
 if [[ -x "$(command -v figlet)" ]]; then
     figlet -f big "DOTFILES LOADEDS"
 fi;
+
+# Go straight into Tmux.
+# https://unix.stackexchange.com/a/113768
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  tmux
+fi
