@@ -1,0 +1,16 @@
+# shellcheck disable=SC2148,SC1090
+
+source <(kubectl completion bash)
+alias k=kubectl
+complete -F __start_kubectl k
+
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+function kbash() {
+   kubectl exec --stdin --tty "$1" -- /bin/bash 
+}
+
+function kprintsecret() {
+   # shellcheck disable=SC2016
+   kubectl get secret "$1" -o go-template='{{range $k,$v := .data}}{{"### "}}{{$k}}{{"\n"}}{{$v|base64decode}}{{"\n\n"}}{{end}}'
+}
