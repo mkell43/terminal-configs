@@ -1,2 +1,5 @@
+# shellcheck disable=SC2148
+
+# shellcheck source=/home/mike/.cargo/env
 source "$HOME/.cargo/env"
 export PATH="/home/mike/.cargo/bin:$PATH"
