@@ -1,6 +1,7 @@
 # shellcheck disable=SC2148
 
 export PROJECTS_DIR=$HOME/Projects
+alias cdp='cd $PROJECTS_DIR'
 
 # __projects_ls() {
 #     find "$PROJECTS_DIR" -maxdepth 1 -mindepth 1 -type d -exec basename {} \;
